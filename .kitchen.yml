@@ -1,5 +1,5 @@
 driver:
-  gui: false
+  gui: true
   forward_agent: yes
   name: vagrant
 
@@ -20,13 +20,13 @@ transport:
 platforms:
   - name: win
     driver:
-      box: "win2012r2-nocm"
+      box: 'win2012r2-nocm'
       vm_hostname:
       network:
       - ['private_network', {ip: '192.168.56.31'}]
       # Mount local /Users/apop/chef-kits folder as c:\share on the VM  
       synced_folders:
-      - ['/Users/apop/chef-kits', 'c:/share', 'disabled: false']
+      - ['~/chef-kits', 'c:/share', 'disabled: false']
       customize:
         cpus: 2
         memory: 2048
