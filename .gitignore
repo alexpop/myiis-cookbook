@@ -1,0 +1,8 @@
+# Ignore everything listed here
+.chef
+.kitchen/
+vendor/
+.bundle/
+.kitchen.local.yml
+Berksfile.lock
+graph.png

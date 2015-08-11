@@ -37,7 +37,7 @@ suites:
        - recipe[myiis-cookbook::app_checkout]
 #       - recipe[myiis-cookbook::app_msdeploy_import]
 #       - recipe[myiis-cookbook::install_google_chrome]
-#       - recipe[myiis-cookbook::audit_recipe]
+#       - recipe[myiis-cookbook::audit_tests]
     attributes:
       git:
         url: file:///c:/share/windows/Git-1.9.5-preview20150319.exe

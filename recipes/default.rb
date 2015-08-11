@@ -21,3 +21,7 @@ powershell_script 'Remove default IIS files' do
   action :run
 end
 
+file '/etc/something' do
+  action :delete
+  only_if { ::File.exists? '/etc/something' }
+end
