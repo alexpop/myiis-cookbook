@@ -3,7 +3,7 @@
 # Recipe:: audit_tests
 #
 
-control_group "IIS Audit" do
+control_group "IIS Audit ---" do
   control "IIS" do
     it "should be installed" do
       expect(windows_feature("IIS-WebServerRole")).to be_installed
@@ -29,7 +29,7 @@ control_group "IIS Audit" do
   end
 end
 
-control_group "Chef audit" do
+control_group "Chef Audit ---" do
   control "chef-client" do
     describe file('c:/opscode/chef/version-manifest.txt') do
       it { should be_file }

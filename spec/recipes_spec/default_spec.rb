@@ -13,7 +13,7 @@ describe 'myiis-cookbook::default' do
     end
 
     it '- does not raise an error' do
-      expect{chef_run}.not_to raise_error
+      expect(chef_run).not_to raise_error
     end
 
     # verity that `windows_feature` with `install` action exists in the resource collection

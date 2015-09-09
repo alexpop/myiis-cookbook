@@ -21,7 +21,12 @@ powershell_script 'Remove default IIS files' do
   action :run
 end
 
-file '/etc/something' do
-  action :delete
-  only_if { ::File.exists? '/etc/something' }
+# Avoid the high CPU usage after kitchen converge
+windows_task '\Microsoft\Windows\Application Experience\ProgramDataUpdater' do
+  action :disable
+end
+
+# Use the 'file' resource to create a test file
+file 'c:\opscode\chef\test.txt' do
+  content 'File creation testi!'
 end

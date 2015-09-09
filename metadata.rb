@@ -4,7 +4,7 @@ maintainer_email 'contact@example.com'
 license          'All rights reserved'
 description      'Installs/Configures myiis-cookbook'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.27'
+version          '0.4.33'
 
 depends 'git'
 depends 'msdeploy'
