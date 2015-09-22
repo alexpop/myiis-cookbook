@@ -21,6 +21,7 @@ platforms:
   - name: win
     driver:
       box: 'win2012r2-nocm'
+      # Not defining a hostname to prevent time waste due to a Windows reboot
       vm_hostname:
       network:
       - ['private_network', {ip: '192.168.56.31'}]
