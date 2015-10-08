@@ -17,7 +17,7 @@ powershell_script 'Remove default IIS files' do
     Remove-Item C:/inetpub/wwwroot/*.*
     Get-ChildItem C:/inetpub/
   EOH
-  only_if { File.exists?('C:/inetpub/wwwroot/iisstart.htm') }
+  only_if { File.exist?('C:/inetpub/wwwroot/iisstart.htm') }
   action :run
 end
 

@@ -15,7 +15,7 @@ git node['myiis-cookbook']['doc-root'] do
   repository node['myiis-cookbook']['git-repo']
   revision node['myiis-cookbook']['git-revision']
   action :sync
-  notifies :run, "ruby_block[retrieve_version]", :immediately
+  notifies :run, 'ruby_block[retrieve_version]', :immediately
 end
 
 # Add app version to node data. Unknown for now
@@ -31,5 +31,3 @@ ruby_block 'retrieve_version' do
   only_if { File.exist?("#{node['myiis-cookbook']['doc-root']}/VERSION.txt") }
   action :nothing
 end
-
-

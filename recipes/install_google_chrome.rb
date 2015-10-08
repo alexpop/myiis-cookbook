@@ -19,10 +19,10 @@ remote_file 'C:\MyKits\Google\Chrome.msi' do
   source node['myiis-cookbook']['chrome']['url']
   checksum node['myiis-cookbook']['chrome']['checksum']
   action :create
-  notifies :run, "batch[dir_google]", :immediately
+  notifies :run, 'batch[dir_google]', :immediately
 end
 
-# Use the 'batch' resource to run a batch script only when notified by the previous 'remove_file' resource 
+# Use the 'batch' resource to run a batch script only when notified by the previous 'remove_file' resource
 # http://docs.opscode.com/resource_batch.html
 batch 'dir_google' do
   code 'dir C:\MyKits\Google'
@@ -35,4 +35,3 @@ windows_package 'Google Chrome' do
   source 'C:\MyKits\Google\Chrome.msi'
   action :install
 end
-

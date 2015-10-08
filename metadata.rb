@@ -1,10 +1,10 @@
-name             'myiis-cookbook'
-maintainer       'Great Websites Inc'
+name 'myiis-cookbook'
+maintainer 'Great Websites Inc'
 maintainer_email 'contact@example.com'
-license          'All rights reserved'
-description      'Installs/Configures myiis-cookbook'
+license 'All rights reserved'
+description 'Installs/Configures myiis-cookbook'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.4.33'
+version '0.5.0'
 
 depends 'git'
 depends 'msdeploy'

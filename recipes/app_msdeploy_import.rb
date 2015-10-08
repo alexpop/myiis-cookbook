@@ -12,11 +12,11 @@ include_recipe 'msdeploy::install'
 # Use the 'msdeploy_sync' resource to checkout from the provided repository
 # Equivalent powershell command:
 # msdeploy -verb:sync -source:package="c:\all_sites.zip" -dest:auto
-msdeploy_sync "Import msdeply package" do
-  source ({ package: node['myiis-cookbook']['msdeploy']['zip'] })
-  dest ({ auto: nil })
+msdeploy_sync 'Import msdeply package' do
+  source(package: node['myiis-cookbook']['msdeploy']['zip'])
+  dest(auto: nil)
   action :run
-  notifies :run, "ruby_block[retrieve_version]", :immediately
+  notifies :run, 'ruby_block[retrieve_version]', :immediately
 end
 
 # Add app version to node data. Unknown for now
