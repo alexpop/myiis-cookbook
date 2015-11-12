@@ -25,8 +25,3 @@ end
 windows_task '\Microsoft\Windows\Application Experience\ProgramDataUpdater' do
   action :disable
 end
-
-# Use the 'file' resource to create a test file
-file 'c:\opscode\chef\test.txt' do
-  content 'File creation testi!'
-end

@@ -5,7 +5,7 @@ describe 'myiis-cookbook::default' do
     # Define the 'path', 'runner' and 'node' variables
     let(:runner) { ChefSpec::ServerRunner.new(WINDOWS2012_OPTS) }
     let(:node) { runner.node }
-    cached(:chef_run) do
+    let(:chef_run) do
       # Stub the file being checked by the recipe
       allow(File).to receive('exist?').and_call_original
       allow(File).to receive('exist?').with('C:/inetpub/wwwroot/iisstart.htm').and_return(true)

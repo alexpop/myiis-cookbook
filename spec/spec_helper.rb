@@ -9,4 +9,4 @@ WINDOWS2012_OPTS = {
   file_cache_path: 'c:\tmp'
 }
 
-at_exit { ChefSpec::Coverage.report! }
+ChefSpec::Coverage.start!
