@@ -38,7 +38,7 @@ suites:
 #       - recipe[myiis-cookbook::app_msdeploy_import]
 #       - recipe[myiis-cookbook::install_google_chrome]
        - recipe[myiis-cookbook::audit_tests]
-       - recipe[myiis-cookbook::harden]
+#       - recipe[myiis-cookbook::harden]
     attributes:
       git:
         url: file:///c:/share/windows/Git-1.9.5-preview20150319.exe
